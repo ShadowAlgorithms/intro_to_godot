@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var current_animation : String
 var previous_animation : String
-
+@onready var health_bar = $ProgressBar
 @onready var animation_player := $Sprite2D
 @export var speed : int = 200
 
@@ -50,11 +50,11 @@ func handle_movement() :
 	
 func _process(delta: float) -> void:
 	handle_animation()
-	
-func _physics_process(delta: float) -> void:
+
 	velocity = handle_movement()
 	move_and_slide()
 	
+	health_bar.value =70
 
 		
 
