@@ -9,4 +9,7 @@
 position = Vector2(134.00002, 227)
 
 [node name="Spikes" parent="." instance=ExtResource("2_epypp")]
+z_index = -3
 position = Vector2(523, 367)
+
+[editable path="Spikes"]
